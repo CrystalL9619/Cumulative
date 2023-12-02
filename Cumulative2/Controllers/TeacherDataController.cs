@@ -148,7 +148,7 @@ namespace school.Controllers
                 NewTeacher.TeacherId = TeacherId;
                 NewTeacher.TeacherFname = TeacherFname;
                 NewTeacher.TeacherLname = TeacherLname;
-
+                NewTeacher.Courses = Courses(id);
                 NewTeacher.EmployeeNum = EmployeeNum;
                 NewTeacher.Hiredate = Hiredate;
                 NewTeacher.Salary = Salary;

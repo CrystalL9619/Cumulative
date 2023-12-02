@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 namespace school.Models
 {
     public class Teacher
@@ -13,7 +14,7 @@ namespace school.Models
         public string EmployeeNum;
         public DateTime Hiredate;
         public decimal Salary;
-
+        public List<string> Courses { get; set; }
     }
 
 }

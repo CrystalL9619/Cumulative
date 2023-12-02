@@ -3,13 +3,17 @@
 @{
     ViewBag.Title = "Show";
 }
-<a class="navlink" href="/Teacher/List">Back to Teachers</a>
+
+@Html.ActionLink("Back to Teachers", "List", "Teacher", new { }, new { @class = "navlink" })
+
 <div id="containershow">
-    <h2>@Model.TeacherFname @Model.TeacherLname</h2>
-
-
+    <h2>@($"{Model.TeacherFname} {Model.TeacherLname}")</h2>
 </div>
+
+@Html.Partial("~/Views/Shared/_CoursesPartial.cshtml", Model.Courses)
 
 <div>
-    <a style="color: #ff0000;" href="/Teacher/DeleteConfirm/@Model.TeacherId">Delete This Teacher</a>
+    @Html.ActionLink("Delete This Teacher", "DeleteConfirm", "Teacher", new { id = Model.TeacherId }, new { style = "color: #ff0000;" })
 </div>
+
+

@@ -43,11 +43,11 @@ namespace school.Controllers
         {
             TeacherDataController controller = new TeacherDataController();
             Teacher NewTeacher = controller.FindTeacher(id);
-            List<string> courses = controller.Courses(id);
+            
 
             return View(NewTeacher);
         }
-
+        
 
         //Views/Teacher/New.cshtml
         public ActionResult New()
